@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import EmojiItem from "./components/emojiItem.vue";
+import TonePicker from "./components/tonePicker.vue";
+const pray = "&#x1F64F;";
 </script>
 
 <template>
   <EmojiItem />
+
+  <TonePicker :emoji="pray" />
 </template>
 
 <style scoped>
