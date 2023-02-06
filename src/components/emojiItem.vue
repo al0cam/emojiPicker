@@ -43,24 +43,33 @@ function pickTone(emoji: string) {
 const pickToneForEmoji = pickTone(props.emoji.value);
 
 const toneContainerHidden = ref(true);
+// TODO: consider inline emoji picker popup
+// TODO: check bordercases of emoji picker when it is too far right
+// TODO: add current emoji variable and define it in the picker on the left side
+//       divided by a vertical line
 </script>
 
 <template>
-  <div id="toneContainer" v-if="!toneContainerHidden">
-    <span
-      v-for="tone in tones"
-      :key="tone.name"
-      :title="emoji.name + ' ' + tone.name"
-      v-html="pickToneForEmoji(tone.value)"
-    >
-    </span>
-  </div>
+  <Teleport :to="'#emoji' + emoji.name">
+    <div id="toneContainer" v-if="!toneContainerHidden">
+      <span
+        v-for="tone in tones"
+        :key="tone.name"
+        :title="emoji.name + ' ' + tone.name"
+        v-html="pickToneForEmoji(tone.value)"
+      >
+      </span>
+    </div>
+  </Teleport>
+
   <h1>
-    <span
-      v-html="emoji.value"
-      :title="emoji.name"
-      @click="toneContainerHidden = !toneContainerHidden"
-    ></span>
+    <div :id="'emoji' + emoji.name">
+      <span
+        v-html="emoji.value"
+        :title="emoji.name"
+        @click="toneContainerHidden = !toneContainerHidden"
+      ></span>
+    </div>
   </h1>
 </template>
 
