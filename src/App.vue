@@ -10,11 +10,10 @@ const pray = {
   <button><h1>ok</h1></button><br />
   <button><h1>ok</h1></button><br />
   <button><h1>ok</h1></button><br />
-  <button><h1>ok</h1></button><br />
-  <EmojiItem :emoji="pray" />
-  <button><h1>ok</h1></button><br />
-  <button><h1>ok</h1></button><br />
-  <button><h1>ok</h1></button><br />
+  <button><h1>ok</h1></button><br /><br />
+  <button><h1>ok</h1></button><button><h1>ok</h1></button><button><h1>ok</h1></button
+  ><EmojiItem :emoji="pray" />
+  <br />
 </template>
 
 <style scoped>
