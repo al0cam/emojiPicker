@@ -52,7 +52,7 @@ const toneContainerHidden = ref(true);
 
 <template>
   <div>
-    <div>
+    <div class="container">
       <div :id="'emoji' + emoji.name"></div>
       <span
         v-html="currentEmoji.value"
@@ -93,7 +93,8 @@ const toneContainerHidden = ref(true);
 }
 #toneContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
   gap: 0.5rem;
   place-items: center;
   place-content: center;
