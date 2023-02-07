@@ -7,7 +7,14 @@ const pray = {
 </script>
 
 <template>
+  <button><h1>ok</h1></button><br />
+  <button><h1>ok</h1></button><br />
+  <button><h1>ok</h1></button><br />
+  <button><h1>ok</h1></button><br />
   <EmojiItem :emoji="pray" />
+  <button><h1>ok</h1></button><br />
+  <button><h1>ok</h1></button><br />
+  <button><h1>ok</h1></button><br />
 </template>
 
 <style scoped>
