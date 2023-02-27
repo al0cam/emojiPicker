@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import EmojiItem from "./components/emojiItem.vue";
+import emojiArrayToneChange from "./components/emojiArrayToneChange.vue";
 const pray = {
   name: "Pray",
   value: "&#x1F64F;",
@@ -7,13 +8,9 @@ const pray = {
 </script>
 
 <template>
-  <button><h1>ok</h1></button><br />
-  <button><h1>ok</h1></button><br />
-  <button><h1>ok</h1></button><br />
-  <button><h1>ok</h1></button><br /><br />
-  <button><h1>ok</h1></button><button><h1>ok</h1></button><button><h1>ok</h1></button
-  ><EmojiItem :emoji="pray" />
+  <EmojiItem :emoji="pray" />
   <br />
+  <emojiArrayToneChange />
 </template>
 
 <style scoped>

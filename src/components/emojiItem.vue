@@ -45,6 +45,7 @@ function pickTone(emoji: string) {
     return emoji + tone;
   };
 }
+
 const pickToneForEmoji = pickTone(props.emoji.value);
 
 const toneContainerHidden = ref(true);
@@ -91,6 +92,7 @@ const toneContainerHidden = ref(true);
 .container {
   position: relative;
 }
+
 #toneContainer {
   display: flex;
   flex-direction: row;
